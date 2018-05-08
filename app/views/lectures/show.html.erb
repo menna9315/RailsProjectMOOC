@@ -2,7 +2,7 @@
 
 <p>
   <strong>Content:</strong>
-  <%= @lecture.content %>
+  <%= raw @lecture.content %>
 </p>
 
 <p>
@@ -31,6 +31,14 @@
 <h2>add a comments:</h2>
 <%= render 'comments/form' %> 
 <br>
+
+<table>
+<% @users.each do |usr| %>
+  <tr>
+  <td><%= usr.email %></td>
+  </tr>
+  <% end %>  
+  </table>
 
 
 

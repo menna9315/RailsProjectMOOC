@@ -8,7 +8,8 @@ gem 'acts_as_votable', '~> 0.11.1'
 gem 'activeadmin', '~> 1.0.0.pre2' 
 gem 'devise'
 gem 'carrierwave', '~> 1.0'
-
+gem 'ckeditor'
+gem 'mini_magick'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'

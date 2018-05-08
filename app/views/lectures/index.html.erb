@@ -15,12 +15,15 @@
   <tbody>
     <% @lectures.each do |lecture| %>
       <tr>
-        <td><%= lecture.content %></td>
+        <td><%=raw lecture.content %></td>
         <td><%= lecture.attachment %></td>
         <td><%= lecture.course.title %></td>
         <td><%= link_to 'Show', lecture %></td>
         <td><%= link_to 'Edit', edit_lecture_path(lecture) %></td>
         <td><%= link_to 'Destroy', lecture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <td><%= link_to 'spam', spam_lecture_path(lecture), method: :POST%></td>
+
 
       </tr>
     <% end %>

@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   devise_for :admin_users, ActiveAdmin::Devise.config
   resources :lectures do
     resources :comments
-  
    member do
      put "like", to: 'lectures#upvote'
+    post :spam
    end
   
 end
