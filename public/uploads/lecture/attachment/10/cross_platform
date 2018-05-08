@@ -1,0 +1,87 @@
+1)install
+2)create new app
+3)src dah elli hsht8l feh
+4)angular cli mohm asm el proj w root el mkan elli hktb el code bta3i assest feh images w icons w 3ndi styles b7ot feh css a7ot el path fe style w script w defaults css mmkn a8iro
+
+5)package.jason
+6)config
+7)ng serve/npm run start=>3shan a2om el server
+8)npm run build=>ynzl file asmo dist gowaha el javascript 7agat elli btzhrll client
+
+9)src
+a)feh app w assets
+b)app elli hnsht8l feh=>appcomponent dah el controler w fi index.html fe => app-root bynadi el controller
+c) app component =>export 3shan import fe ay kan tani w kol declarartin lazm ablha @
+d)template:'<div>{{title}}</div>'  =>fe @component w ashil template elli mawgoda
+function b void w return
+-------------------------
+export class AppComponent{
+title:string='app';
+age:number=25;
+flag:boolean=true;
+student:Array<string>={'ahmed', 'menna'}
+
+}
+
+app.component.html
+<div *ngfor='let name of students' >
+{{name}}
+</div>
+kda hytl3i el names fe el home
+if=><li *ngif='i==1' [hidden]= 'flag && flag==true' [ngClass]='{'x':flag && flag==true}'> x dah class ana 3mltlo create law 
+{{name}}
+
+</li>
+ 
+make constructor gowa el class
+----------------
+constructor(){
+this.alertMyName();
+
+}
+
+func no3ha void
+---------------
+
+
+alertMyName(): void{
+alert('menna');
+
+}
+
+bindMyName(): string{
+return this.students
+
+}
+
+bindsingleName(index: number): string{  //3shan ytl3 index el tani fe el string
+return this.students[index];
+
+
+}
+
+
+
+
+
+app componet
+---------
+{{bindMyName()}} anadi 3ala el func
+{{bindsingleName('2')}} 
+
+
+
+
+
+
+
+
+loop
+pipe
+create new component and make route w n3ml relation
+
+
+create module gdid=>ng g c loginComponet
+
+
+

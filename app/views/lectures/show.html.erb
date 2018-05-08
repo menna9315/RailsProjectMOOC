@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @lecture.content %>
+</p>
+
+<p>
+  <strong>Attachment:</strong>
+  <%= image_tag @lecture.attachment_url %>
+
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @lecture.course_id %>
+</p>
+
+<%= link_to like_lecture_path(@lecture), class: "like", method: :put do %>
+  <br>
+  <button type="button" class="btn btn-info" aria-label="Left Align">
+    <span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
+    <span class="badge"><%= @lecture.get_upvotes.size %></span>
+  </button>
+<% end %>
+
+
+ 
+<h2><%= @lecture.comments.count %> comments </h2>
+<%= render @lecture.comments %> 
+<h2>add a comments:</h2>
+<%= render 'comments/form' %> 
+<br>
+
+
+
+
+
+
+
+
+  
+ 
+
+
+
+<%= link_to 'Edit', edit_lecture_path(@lecture) %> |
+<%= link_to 'Back', lectures_path %>
