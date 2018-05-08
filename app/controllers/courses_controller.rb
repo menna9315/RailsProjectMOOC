@@ -1,4 +1,10 @@
 class CoursesController < InheritedResources::Base
+  before_action :authenticate_user!
+  def show
+    @course= Course.find(params[:id])
+    @lectures= Course.find(params[:id]).lectures  
+  end
+
 
   private
 

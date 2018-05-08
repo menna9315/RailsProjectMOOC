@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
   resources :lectures do
     resources :comments
   
@@ -9,7 +10,6 @@ Rails.application.routes.draw do
 end
 
   resources :courses
-  devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   #devise_for :users
   #devise_for :users, path: 'users'

@@ -6,7 +6,14 @@
 </p>
 
 
-
+<table>
+<% @lectures.each do |lec| %>
+  <tr>
+  <td><%= lec.content %></td>
+  <td><%= lec.attachment %></td>
+  </tr>
+  <% end %>  
+  </table>
 
     
      

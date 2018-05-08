@@ -1,4 +1,6 @@
 class LecturesController < InheritedResources::Base
+  before_action :authenticate_user!
+
   def upvote
     @lecture = Lecture.find(params[:id])
     @lecture.upvote_from current_user
