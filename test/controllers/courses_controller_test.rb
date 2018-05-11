@@ -4,6 +4,8 @@ class CoursesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @course = courses(:one)
   end
+ 
+
 
   test "should get index" do
     get courses_url
@@ -45,4 +47,7 @@ class CoursesControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to courses_url
   end
+
+
+
 end
