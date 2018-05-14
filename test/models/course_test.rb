@@ -4,4 +4,8 @@ class CourseTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
+  test "should not save course without title" do
+    course = Course.new
+    assert_not course.save, "Saved the course without a title"
+  end
 end

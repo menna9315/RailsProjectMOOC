@@ -1,4 +1,6 @@
 class Course < ApplicationRecord
     has_many :lectures
+    validates :title, presence: true
+
 
 end
