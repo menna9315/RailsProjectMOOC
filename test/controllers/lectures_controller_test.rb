@@ -48,8 +48,8 @@ class LecturesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to lectures_url
   end
 
-  test "should upvote lecture" do
-    put :upvote, id: @lecture
+  test "should like lecture" do
+    put :upvote, :id => @lecture
     assert_response :success
 end
 end
